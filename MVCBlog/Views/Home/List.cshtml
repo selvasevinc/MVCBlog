@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MVCBlog.Models.Class1>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="blog-posts grid-system">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="all-blog-posts">
+                    <div class="row">
+                        @foreach (var x in Model)
+                        {
+
+                            <div class="col-lg-6">
+                                <div class="blog-post">
+                                    <div class="blog-thumb">
+                                        <img src="@x.Resim" alt="">
+                                    </div>
+                                    <div class="down-content">
+                                        <span></span>
+                                        <a href="@Url.Action("Details","Home", new {id=x.Id })"><h4>@Html.DisplayFor(modelItem => x.Baslik)</h4></a>
+                                        <ul class="post-info">
+                                            <li><a href="#">@x.KullaniciId</a></li>
+                                            <li><a href="#">@x.EklenmeTarihi</a></li>
+                                            <li><a href="#"></a></li>
+                                        </ul>
+                                        <p>@x.Aciklama</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        }
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="sidebar-item categories">
+                                <div class="sidebar-heading">
+                                    <h2>Kategoriler</h2>
+                                </div>
+                                @{Html.RenderAction("KategoriListesi", "Kategori");}
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

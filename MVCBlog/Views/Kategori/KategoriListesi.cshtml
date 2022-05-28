@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MVCBlog.Models.Kategori>
+
+@foreach (var item in Model)
+{
+    if (Session["username"] == null)
+    {
+        <div class="content">
+            <ul>
+                <li><a href="/Home/List/@item.Id">@item.KategoriAd</a></li>
+            </ul>
+        </div>
+    }
+    else
+    {
+        <div class="content">
+            <ul>
+                <li><a href="/Post/List/@item.Id">@item.KategoriAd</a></li>
+            </ul>
+        </div>
+    }
+
+
+
+}

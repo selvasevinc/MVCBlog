@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "Dünyanın Yaşını Nasıl Biliyoruz?";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="blog-posts grid-system">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="all-blog-posts">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="~/Content/assets/images/blog-post-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <a href="post-details.html"><h4>Dünyanın Yaşını Nasıl Biliyoruz?</h4></a>
+                                    <ul class="post-info">
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">Mayıs 12, 2020</a></li>
+                                        <li><a href="#">1 Yorum</a></li>
+                                    </ul>
+                                    <p>
+                                        Dünya 4.6 milyar yıl yaşındadır. Peki bunu nasıl biliyoruz? Geçmişten günümüze pekçok bilim insanı ve araştırmacı dünyanın yaşını hesaplamak için farklı yöntemler kullanmış ve farklı sonuçlara ulaşmıştır. Örneğin James Ussher İncil'i esas alarak dünyanın 6000 yıl yaşında olduğunu, dünyanın soğuma süresini hesaplayan ve bu sonucu esas alan Lord Kelvin dünyanın 40 milyon yıl yaşında olduğunu, kaya katmanları üzerinde araştırmalar yapan Charles Darwin dünyanın en az 300 milyon yıl yaşında olduğunu, fosiller üzerinde çalışmalar yapan Benoit de Maillet ise dünyanın en az 2 milyar yıl yaşında olduğunu savunmuştur.
+                                        <br><br>1800'lü yılların sonunda radyoaktivitenin bulunması ile fosillerin, taşların, antik yapıların ve dünyanın yaşını hesaplamak için bir yöntem doğmuş oldu. Radyometrik Tarihleme adı verilen bu yöntemde radyoaktif elementlerin değişimleri gözlenerek yaş hesaplamaları mümkün hale geldi.
+                                        <br><br> Radyoaktif atomlar kararsızdır ve kararlı hale geçebilmek için farklı ışımalar ile farklı atomlara dönüşürler. Örneğin uranyum-238 farklı ışıma ve aşamalar sonucunda kararlı kurşun-206 atomuna dönüşür. Bir radyoaktif maddenin başlangıçtaki miktarından yarısı kalıncaya kadar geçen süreye yarılanma süresi denir. Örneğin elimizde 1 kg uranyum-238 varsa 4.5 milyar yıl sonunda geriye yarım kilo uranyum-238 kalır. Çünkü uranyum-238' in yarılanma süresi 4.5 milyar yıldır. Kısacası bir maddede bulunan ve yarılanma süresi bilinen bir radyoaktif maddenin ilk miktarı ile son miktarı biliniyorsa maddenin yaşı hesaplanabilir.
+                                    </p>
+                                    <p>Dünyanın yaşını hesaplamak için bilim insanları ilk olarak zirkon mineralinden yararlanmışlardır. Zirkon minerali oluşurken kurşun-206 içermez fakat uranyum-238 içerir. Zirkondaki uranyum-238 atomları zamanla kurşun-206 atomlarına dönüşür. İncelenen zirkon mineralinin içerdiği kurşun miktarı bulunur ve bu miktardan mineral oluşurken var olan uranyum-238 miktarı hesaplanır. Mineralde bulunan şu anki uranyum-238 miktarı da yapılan testler ile bulunur. Böylece mineraldeki ilk uranyum-238 ve şu anki uranyum-238 miktarı belirlenir. Yarılanma süresi de bilindiğine göre zirkon mineralinin yaşı hesaplanabilir.</p>
+                                    <p>1990 yılında Avustralya'da 4.4 milyar yıl yaşında olduğu hesaplanan bir zirkon minerali bulunmuştur. Böylece dünyanın en az 4.4 milyar yıl yaşında olduğu belirlenmiştir. Bu sonuçla yetinmeyen bilim insanları dünyaya düşen meteoritlerin de yaşlarını benzer yollarla hesaplamışlardır. Farklı kaynaklardan gelen ve incelenen bütün meteoritlerin yaklaşık olarak 4.6 milyar yıl yaşında olduğu görülmüştür. Bu da güneş sisteminde yer alan herşeyin aynı zamanda oluşmaya başladığını göstermektedir. Yani dünyamız gibi diğer gezegenler, güneşimiz ve sistemimizde bulunan asteroitler de 4.6 milyar yıl yaşındadır.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-item comments">
+                                <div class="sidebar-heading">
+                                    <h2>1 yorum</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li>
+                                            <div class="author-thumb">
+                                                <img src="~/Content/assets/images/comment-author-01.jpg" alt="">
+                                            </div>
+                                            <div class="right-content">
+                                                <h4>Ali Yıldız<span>Mayıs 16, 2020</span></h4>
+                                                <p>Yorumyorumyorumyorumyorumyorumyorumyorum</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-item submit-comment">
+                                <div class="sidebar-heading">
+                                    <h2>Yorum Yaz</h2>
+                                </div>
+                                <div class="content">
+                                    <form id="comment" action="#" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <fieldset>
+                                                    <input name="name" type="text" id="name" placeholder="İsim" required="">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <fieldset>
+                                                    <input name="email" type="text" id="email" placeholder="e-posta adresi" required="">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12">
+                                                <fieldset>
+                                                    <input name="subject" type="text" id="subject" placeholder="Konu">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <fieldset>
+                                                    <textarea name="message" rows="6" id="message" placeholder="Yorumunuz" required=""></textarea>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <fieldset>
+                                                    <button type="submit" id="form-submit" class="main-button">Gönder</button>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="sidebar-item recent-posts">
+                                <div class="sidebar-heading">
+                                    <h2>Yeni Gönderiler</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li>
+                                            <a href="dunyanin-yasini-nasil-biliyoruz.html">
+                                                <h5>Dünyanın Yaşını Nasıl Biliyoruz?</h5>
+                                                <span>Mayıs 31, 2020</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="haptik-teknoloji.html">
+                                                <h5>Haptik Taknoloji</h5>
+                                                <span>Mayıs 28, 2020</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="animasyonlu-saat-tasarimi.html">
+                                                <h5>Animasyonlu Saat Tasarımı</h5>
+                                                <span>May 14, 2020</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-item categories">
+                                <div class="sidebar-heading">
+                                    <h2>Kategoriler</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li><a href="#">- Bilim</a></li>
+                                        <li><a href="#">- Teknoloji</a></li>
+                                        <li><a href="#">- Web-Tasarım</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-item tags">
+                                <div class="sidebar-heading">
+                                    <h2>Etiketler</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li><a href="#">Yapay Zeka</a></li>
+                                        <li><a href="#">HTML5</a></li>
+                                        <li><a href="#">Tasarım</a></li>
+                                        <li><a href="#">Web</a></li>
+                                        <li><a href="#">PSD</a></li>
+                                        <li><a href="#">Responsive</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewBag.Title = "Animasyonlu Saat Tasarımı"; 
+}
+
+<section class="blog-posts grid-system">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="all-blog-posts">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="~/Content/assets/images/blog-post-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <a href="post-details.html"><h4>Animasyonlu Saat Tasarımı<h4></a>
+                                    <ul class="post-info">
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">Mayıs 12, 2020</a></li>
+                                        <li><a href="#">1 Yorum</a></li>
+                                    </ul>
+                                    <p>
+                                        Bu makalemizde HTML, CSS, JQuery ve JavaScript kullanarak animasyonlu bir saat tasarlayacağız. Animasyon kısmında rakamlar yukarıdan aşağıya düşerek değişecek. Bunu da CSS'deki "background-position" değerini değiştirerek kolaylıkla yapabileceğiz. JQuery ve JavaScript kısmını ise güncel saat, dakika ve saniyeyi bulmada ve HTML elemanlarının "background-position" değerlerini değiştirmede kullanacağız.
+                                        <br><br>Tasarlayacağımız uygulamayı buraya tıklayarak test edebilir, <a rel="nofollow" href="#" target="_parent">buraya</a> tıklayarak bilgisayarınıza indirebilirsiniz.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-item comments">
+                                <div class="sidebar-heading">
+                                    <h2>1 yorum</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li>
+                                            
+                                            <div class="right-content">
+                                                <h4>Ali Yıldız<span>Mayıs 16, 2020</span></h4>
+                                                <p>Yorumyorumyorumyorumyorumyorumyorumyorum</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-item submit-comment">
+                                <div class="sidebar-heading">
+                                    <h2>Yorum Yaz</h2>
+                                </div>
+                                <div class="content">
+                                    <form id="comment" action="#" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <fieldset>
+                                                    <input name="name" type="text" id="name" placeholder="İsim" required="">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <fieldset>
+                                                    <input name="email" type="text" id="email" placeholder="e-posta adresi" required="">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12">
+                                                <fieldset>
+                                                    <input name="subject" type="text" id="subject" placeholder="Konu">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <fieldset>
+                                                    <textarea name="message" rows="6" id="message" placeholder="Yorumunuz" required=""></textarea>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <fieldset>
+                                                    <button type="submit" id="form-submit" class="main-button">Gönder</button>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="sidebar-item recent-posts">
+                                <div class="sidebar-heading">
+                                    <h2>Yeni Gönderiler</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li>
+                                            <a href="dunyanin-yasini-nasil-biliyoruz.html">
+                                                <h5>Dünyanın Yaşını Nasıl Biliyoruz?</h5>
+                                                <span>Mayıs 31, 2020</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="haptik-teknoloji.html">
+                                                <h5>Haptik Taknoloji</h5>
+                                                <span>Mayıs 28, 2020</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="animasyonlu-saat-tasarimi.html">
+                                                <h5>Animasyonlu Saat Tasarımı</h5>
+                                                <span>May 14, 2020</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-item categories">
+                                <div class="sidebar-heading">
+                                    <h2>Kategoriler</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li><a href="#">- Bilim</a></li>
+                                        <li><a href="#">- Teknoloji</a></li>
+                                        <li><a href="#">- Web-Tasarım</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-item tags">
+                                <div class="sidebar-heading">
+                                    <h2>Etiketler</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li><a href="#">Yapay Zeka</a></li>
+                                        <li><a href="#">HTML5</a></li>
+                                        <li><a href="#">Tasarım</a></li>
+                                        <li><a href="#">Web</a></li>
+                                        <li><a href="#">PSD</a></li>
+                                        <li><a href="#">Responsive</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

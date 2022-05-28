@@ -1,0 +1,19 @@
+﻿@model IEnumerable<MVCBlog.Models.Yorum>
+
+@foreach (var i in Model)
+{
+    <ul>
+        <li>
+
+            <div class="right-content">
+                <h4>
+                    @Html.DisplayFor(modelItem => i.Kullanici.KullaniciAd)
+
+                </h4>
+                <p> @Html.DisplayFor(modelItem => i.Yazi)</p>
+            </div>
+        </li>
+    </ul>
+<hr />
+}                 
+

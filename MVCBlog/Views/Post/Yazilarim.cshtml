@@ -1,0 +1,105 @@
+﻿@model IEnumerable<MVCBlog.Models.Post>
+
+@{
+    ViewBag.Title = "Yazilarim";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+
+@helper Truncate(string input, int length)
+{
+    if (input.Length <= length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+
+}
+<section class="blog-posts">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+
+
+            <div class="container-xl">
+                <div class="table-responsive">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-12 text-left">
+                                    <h2>Yazılarım</h2>
+                                </div>
+
+                            </div>
+                        </div>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Kategori.KategoriAd)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Baslik)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Icerik)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Resim)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.EklenmeTarihi)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var x in Model)
+                                {
+                                <tr>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => x.Kategori.KategoriAd)
+                                    </td>
+                                    <td>
+                                        @Truncate(x.Baslik, 20)
+                                    </td>
+
+                                    <td>
+                                        @Truncate(x.Icerik, 30)
+                                    </td>
+                                    <td>
+                                        @Truncate(x.Resim, 10)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => x.EklenmeTarihi)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Düzenle", "Edit", new { id = x.Id, @class = "material-icons" })
+                                        @Html.ActionLink("incele", "Details", new { id = x.Id, @class = "material-icons" })
+                                        @Html.ActionLink("Sil", "Delete", new { id = x.Id, @class = "material-icons" })
+                                    </td>
+                                </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <div class="clearfix">
+                            <div class="hint-text"></div>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a href="#">Önceki</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">Sonraki</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
