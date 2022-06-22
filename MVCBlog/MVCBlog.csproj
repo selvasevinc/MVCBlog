@@ -251,6 +251,7 @@
     <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Kategori\KategoriListesi.cshtml" />
     <Content Include="Views\Kategori\Kategoriler.cshtml" />
+    <Content Include="Views\Post\YorumYap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -25,7 +25,8 @@ namespace MVCBlog.Controllers
                     Aciklama = i.Aciklama,
                     Resim = i.Resim,
                     EklenmeTarihi = i.EklenmeTarihi,
-                    KullaniciId = i.KullaniciId,
+                    KullaniciId = i.KullaniciId,  
+                    KullaniciAd=i.Kullanici.KullaniciAd,
 
                     KategoriId = i.KategoriId
 
@@ -42,7 +43,7 @@ namespace MVCBlog.Controllers
         public ActionResult Index(int? id)
         {
             ViewBag.KategoriId = db.Kategoris.ToList();
-            var postlar = db.Posts.ToList();   
+            var postlar = db.Posts.OrderByDescending(x => x.Id).ToList();   
             return View(postlar);
         }
 
@@ -175,21 +176,38 @@ namespace MVCBlog.Controllers
 
         public JsonResult YorumYap(string yorum, int Postid)
         {
-           
+
             var kullaniciadi = Session["username"].ToString();
             var kullanici = db.Kullanicis.Where(i => i.KullaniciAd == kullaniciadi).SingleOrDefault();
-           
-             
 
-                db.Yorums.Add(new Yorum
-                { KullaniciId = kullanici.Id,
-                    PostId = Postid,
-                    Yazi = yorum });
-                db.SaveChanges();
-      
+
+
+            db.Yorums.Add(new Yorum
+            {
+                KullaniciId = kullanici.Id,
+                PostId = Postid,
+                Yazi = yorum
+            });
+            db.SaveChanges();
+
 
             return Json(false, JsonRequestBehavior.AllowGet);
 
         }
+
+        //[HttpGet]
+        //public PartialViewResult YorumYap(int id)
+        //{
+        //    ViewBag.deger = id;
+        //    return PartialView();
+        //}
+
+        //[HttpPost]
+        //public PartialViewResult YorumYap(Yorum y)
+        //{
+        //    db.Yorums.Add(y);
+        //    db.SaveChanges();
+        //    return PartialView();
+        //}
     }
 }

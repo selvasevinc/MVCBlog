@@ -97,43 +97,7 @@ namespace MVCBlog.Controllers
             return RedirectToAction("Index","Home");
         }
 
-        // GET: Kullanici/Edit/5
-        public ActionResult Edit(int id)
-        {
-            string kullaniciadi = Session["username"].ToString();
-            var post = db.Posts.Where(i => i.Id == id).SingleOrDefault();
-            if (post == null)
-            {
-                return HttpNotFound();
-            }
-            if (post.Kullanici.KullaniciAd == kullaniciadi)
-            {
-                ViewBag.KullaniciId = new SelectList(db.Kategoris, "Id", "KategoriAd");
-                return View(post);
-            }
-            return HttpNotFound();
-        }
-
-        // POST: Kullanici/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, Post model)
-        {
-            try
-            {
-                var post = db.Posts.Where(i => i.Id == id).SingleOrDefault();
-                post.Baslik = model.Baslik;
-                post.Aciklama = model.Aciklama;
-                post.Icerik = model.Icerik;
-                post.Resim = model.Resim;
-                post.KategoriId = model.KategoriId;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View(model);
-            }
-        }
+        
 
         // GET: Kullanici/Delete/5
         public ActionResult Delete(int id)

@@ -26,6 +26,7 @@ namespace MVCBlog.Controllers
                     Resim = i.Resim,
                     EklenmeTarihi = i.EklenmeTarihi,
                     KullaniciId = i.KullaniciId,
+                    KullaniciAd = i.Kullanici.KullaniciAd,   
 
                     KategoriId = i.KategoriId
 
@@ -40,7 +41,7 @@ namespace MVCBlog.Controllers
         public ActionResult Index()
         {
             ViewBag.KategoriId = db.Kategoris.ToList();
-            var postlar = db.Posts.ToList();
+            var postlar = db.Posts.OrderByDescending(x => x.Id).ToList();
             return View(postlar);
         }
 
@@ -49,35 +50,39 @@ namespace MVCBlog.Controllers
             var post = db.Posts.Where(i => i.Id == id).SingleOrDefault();
             return View(post);
         }
-        public ActionResult Bilim()
-        {
 
-            return View();
-        }
-        public ActionResult Teknoloji()
-        {
 
-            return View();
-        }
-        public ActionResult WebTasarim()
-        {
 
-            return View();
-        }
-        public ActionResult Dunyanin_Yasini_Nasil_Biliyoruz() 
-        {
-            return View();
-        }
 
-        public ActionResult Haptik_Teknoloji()
-        {
-            return View();
-        }
+        //public ActionResult Bilim()
+        //{
 
-        public ActionResult Animasyonlu_Saat_Tasarimi()
-        {
-            return View();
-        }
+        //    return View();
+        //}
+        //public ActionResult Teknoloji()
+        //{
+
+        //    return View();
+        //}
+        //public ActionResult WebTasarim()
+        //{
+
+        //    return View();
+        //}
+        //public ActionResult Dunyanin_Yasini_Nasil_Biliyoruz() 
+        //{
+        //    return View();
+        //}
+
+        //public ActionResult Haptik_Teknoloji()
+        //{
+        //    return View();
+        //}
+
+        //public ActionResult Animasyonlu_Saat_Tasarimi()
+        //{
+        //    return View();
+        //}
 
       
     }

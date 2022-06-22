@@ -20,5 +20,6 @@ namespace MVCBlog.Models
         public string Resim { get; set; }
         public int KullaniciId { get; set; }
         public int KategoriId { get; set; }
+        public string KullaniciAd { get; set; }
     }
 }
